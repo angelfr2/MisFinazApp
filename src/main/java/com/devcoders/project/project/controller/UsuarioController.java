@@ -23,4 +23,14 @@ public class UsuarioController {
     public void insertar(@RequestBody Usuario usuario) {
         repo.save(usuario);
     }
+	
+	@PutMapping
+    public void modificar(@RequestBody Usuario usuario) {
+        repo.save(usuario);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public void eliminar(@PathVariable("id") Integer id) {
+        repo.deleteById(id);
+    }
 }
