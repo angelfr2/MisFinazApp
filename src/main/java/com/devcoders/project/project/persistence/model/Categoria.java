@@ -2,7 +2,8 @@ package com.devcoders.project.project.persistence.model;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "Categoria")
+@NamedQuery(name = "Categoria.findByNombre", query = "SELECT categoria FROM Categoria categoria WHERE categoria.nombre = :nombre")
 public class Categoria {
 
     @Id
